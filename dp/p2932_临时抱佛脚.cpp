@@ -1,4 +1,5 @@
 #include <iostream>
+
 #include <algorithm>
 #include <cstring>
 using namespace std;
@@ -18,7 +19,7 @@ int main()
             cin >> b[j];
             sum += b[j];
         }
-
+    
         sort(b, b + a[i]);
         for (int h = 0; h < a[i]; h++)
         {
