@@ -6,11 +6,11 @@ using namespace std;
 int main()
 {
     // Read the number of vertices
-    int n;
+    long long n;
     cin >> n;
 
     // Initialize a 2D vector to store edge weights
-    vector<vector<int>> d(n, vector<int>(n, 0));
+    vector<vector<long long>> d(n, vector<int>(n, 0));
 
     // Read the edge weights for the complete graph
     rep(i, n)

@@ -1,37 +1,39 @@
 #include <iostream>
-#include <algorithm>
-#include <cstring>
-#include <unordered_map>
+#include <vector>
 using namespace std;
-const int N = 100;
-int n, idx;
-bool h[N];
-struct edge
-{
-    int x, y, w;
-    bool operator<(const edge &k)
-    {
-        return w > k.w;
-    }
-} g[N];
+#define rep(i, x) for (int i = 0; i < (x); i++)
+const int N = 1e3;
+long long d[N][N];
 int main()
 {
+    long long n;
     cin >> n;
-    for (int i = 1; i <= n; i++)
+    vector<long long> dp(1 << n, 0ll);
+    for (int i = 0; i < n; i++)
     {
-        for (int j = i + 1; j <= n; j++)
+        for (int j = i + 1; j < n; j++)
+            cin >> d[i][j];
+    }
+    for (int b = 0; b < (1 << n) - 1; b++)
+    {
+        int l = -1;
+        rep(i, n)
         {
-            int x;
-            cin >> x;
-            g[idx].x = i, g[idx].y = j, g[idx++].w = x;
+            if (!(b >> i & 1))
+            {
+                l = i;
+                break;
+            }
+        }
+        for (int i = 0; i < n; i++)
+        {
+            if (!((b >> i) & 1))
+            {
+                int nb = b | (1 << i) | (1 << l);
+                dp[nb] = max(dp[nb], dp[b] + d[l][i]);
+            }
         }
     }
-    long long ans = 0;
-    for (int i = 0; i < idx - 1; i++)
-    {
-        for (int j = i + 1; j < idx; j++)
-        {
-        }
-    }
+    cout << dp.back();
     return 0;
 }
