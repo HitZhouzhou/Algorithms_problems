@@ -1,4 +1,4 @@
-# **Prime, Divisor, and Euler Totient Function**
+i**Prime, Divisor, and Euler Totient Function**
 
 ## 1. Prime Factorization
 Every integer can be expressed as the product of its prime factors, and this representation is unique.
@@ -57,7 +57,11 @@ $\phi(n)$
 ### How to calculate the $\phi(n)$
 First ,euler totient function is a 积性函数，meaning that when m and n 互质,$\phi(mn)=\phi(m)*\phi(n)$. 
 
-Therefore,as we konw that n can be only divide in one way to prime as:$n=p_1^{a_1}*p_2^{a_2}\dots{p_x^{a_x}}$.  
+Therefore,as we know that n can be only divide in one way to prime as:$n=p_1^{a_1}*p_2^{a_2}\dots{p_x^{a_x}}$.  
 So $\phi(x)=\phi(p_1^{a_1})*\phi(p_2^{a_2})\dots*\phi(p_x^{a_x})$  
 And we can find that $\phi(p_s^{a_s})=p_s^{a_s}-p_s^{(a_s-1)}$.  
-Because $\phi(p_s)$
+Because $\phi(p_s)$  
+##
+$  $
+$\phi(h)=f(x)+m+\cancel{} $
+$\varphi=2^{5} $
