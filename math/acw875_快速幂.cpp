@@ -13,6 +13,19 @@ void qmi(LL a, LL b, LL p)
         b >>= 1;
     }
 }
+void quick_m(LL a, LL b, LL p)
+{
+    res = 1;
+    while (b)
+    {
+        if (b & 1)
+        {
+            res = res * a % p;
+        }
+        a = (a * a) % p;
+        b >>= 1;
+    }
+}
 int main()
 {
     LL t;
