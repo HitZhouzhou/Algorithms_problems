@@ -36,7 +36,7 @@ void read(int a[])
         a[i] = s[len - i - 1] - '0';
     }
 }
-// dividen:a,divisor:b,len:the len of the divisor;
+// a:divided,b:divisor,len:the len of the divisor;
 bool greater_eq(int a[], int b[], int last_dg, int len)
 {
     if (a[last_dg + len] > 0)
