@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <cstdio>
 #include <iostream>
 #include <string>
@@ -84,5 +85,17 @@ int main()
         }
     }
     printf("%d", ans);
+=======
+#include <iostream>
+#include <algorithm>
+#include <cstring>
+using namespace std;
+const int N = 21;
+string str[N];
+int ans;
+int main()
+{
+
+>>>>>>> bea3683ebaecb81ac249f1400df2f43e65e2c224
     return 0;
 }
