@@ -8,7 +8,7 @@ ll n,ans=-0x3f3f3f3f,sum[N];
 struct cow
 {
     ll w, s;
-    bool operator<(const cow &x)const
+    bool operator<(const cow &x)
     {
         return max(-s,w-x.s)<=max(-x.s,x.w-s); 
     }
